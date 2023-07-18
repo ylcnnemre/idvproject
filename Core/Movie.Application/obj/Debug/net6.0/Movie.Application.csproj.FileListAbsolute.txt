@@ -1,0 +1,15 @@
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\bin\Debug\net6.0\Movie.Application.deps.json
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\bin\Debug\net6.0\Movie.Application.dll
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\bin\Debug\net6.0\Movie.Application.pdb
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\bin\Debug\net6.0\Movie.Domain.dll
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\bin\Debug\net6.0\Movie.Domain.pdb
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\obj\Debug\net6.0\Movie.Application.csproj.AssemblyReference.cache
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\obj\Debug\net6.0\Movie.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\obj\Debug\net6.0\Movie.Application.AssemblyInfoInputs.cache
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\obj\Debug\net6.0\Movie.Application.AssemblyInfo.cs
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\obj\Debug\net6.0\Movie.Application.csproj.CoreCompileInputs.cache
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\obj\Debug\net6.0\Movie.Application.csproj.CopyComplete
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\obj\Debug\net6.0\Movie.Application.dll
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\obj\Debug\net6.0\refint\Movie.Application.dll
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\obj\Debug\net6.0\Movie.Application.pdb
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Movie.Application\obj\Debug\net6.0\ref\Movie.Application.dll

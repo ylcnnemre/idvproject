@@ -1,0 +1,12 @@
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Domain\bin\Debug\net6.0\Movie.Domain.deps.json
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Domain\bin\Debug\net6.0\Movie.Domain.dll
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Domain\bin\Debug\net6.0\Movie.Domain.pdb
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Domain\obj\Debug\net6.0\Movie.Domain.csproj.AssemblyReference.cache
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Domain\obj\Debug\net6.0\Movie.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Domain\obj\Debug\net6.0\Movie.Domain.AssemblyInfoInputs.cache
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Domain\obj\Debug\net6.0\Movie.Domain.AssemblyInfo.cs
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Domain\obj\Debug\net6.0\Movie.Domain.csproj.CoreCompileInputs.cache
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Domain\obj\Debug\net6.0\Movie.Domain.dll
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Domain\obj\Debug\net6.0\refint\Movie.Domain.dll
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Domain\obj\Debug\net6.0\Movie.Domain.pdb
+D:\NEW YAZILIM\dotnetv2\filmapp\MovieApp\Core\Domain\obj\Debug\net6.0\ref\Movie.Domain.dll
