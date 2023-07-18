@@ -22,6 +22,21 @@ namespace Movie.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("AppUserMovie", b =>
+                {
+                    b.Property<int>("FavoriteMoviesId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("fansId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("FavoriteMoviesId", "fansId");
+
+                    b.HasIndex("fansId");
+
+                    b.ToTable("AppUserMovie");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -254,38 +269,6 @@ namespace Movie.Persistence.Migrations
                     b.ToTable("movie");
                 });
 
-            modelBuilder.Entity("Movie.Domain.Entities.Rating", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("FilmId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Value")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("FilmId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("rating");
-                });
-
             modelBuilder.Entity("Movie.Domain.Entities.Review", b =>
                 {
                     b.Property<int>("Id")
@@ -301,68 +284,38 @@ namespace Movie.Persistence.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("FilmId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("UserId")
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("movieId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FilmId");
-
                     b.HasIndex("UserId");
+
+                    b.HasIndex("movieId");
 
                     b.ToTable("review");
                 });
 
-            modelBuilder.Entity("Movie.Domain.Entities.User", b =>
+            modelBuilder.Entity("AppUserMovie", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.HasOne("Movie.Domain.Entities.Movie", null)
+                        .WithMany()
+                        .HasForeignKey("FavoriteMoviesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("user");
-                });
-
-            modelBuilder.Entity("MovieUser", b =>
-                {
-                    b.Property<int>("UsersId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("filmsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("UsersId", "filmsId");
-
-                    b.HasIndex("filmsId");
-
-                    b.ToTable("MovieUser");
+                    b.HasOne("Movie.Domain.Entities.Identity.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("fansId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -416,70 +369,32 @@ namespace Movie.Persistence.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Movie.Domain.Entities.Rating", b =>
-                {
-                    b.HasOne("Movie.Domain.Entities.Movie", "Film")
-                        .WithMany("Ratings")
-                        .HasForeignKey("FilmId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Movie.Domain.Entities.User", "User")
-                        .WithMany("Ratings")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Film");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Movie.Domain.Entities.Review", b =>
                 {
-                    b.HasOne("Movie.Domain.Entities.Movie", "Film")
-                        .WithMany("Reviews")
-                        .HasForeignKey("FilmId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Movie.Domain.Entities.User", "User")
+                    b.HasOne("Movie.Domain.Entities.Identity.AppUser", "User")
                         .WithMany("Reviews")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Film");
+                    b.HasOne("Movie.Domain.Entities.Movie", "movie")
+                        .WithMany("Reviews")
+                        .HasForeignKey("movieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
+
+                    b.Navigation("movie");
                 });
 
-            modelBuilder.Entity("MovieUser", b =>
+            modelBuilder.Entity("Movie.Domain.Entities.Identity.AppUser", b =>
                 {
-                    b.HasOne("Movie.Domain.Entities.User", null)
-                        .WithMany()
-                        .HasForeignKey("UsersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Movie.Domain.Entities.Movie", null)
-                        .WithMany()
-                        .HasForeignKey("filmsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("Movie.Domain.Entities.Movie", b =>
                 {
-                    b.Navigation("Ratings");
-
-                    b.Navigation("Reviews");
-                });
-
-            modelBuilder.Entity("Movie.Domain.Entities.User", b =>
-                {
-                    b.Navigation("Ratings");
-
                     b.Navigation("Reviews");
                 });
 #pragma warning restore 612, 618

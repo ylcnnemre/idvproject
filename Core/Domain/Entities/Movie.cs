@@ -1,4 +1,5 @@
 ﻿using Movie.Domain.Entities.Common;
+using Movie.Domain.Entities.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,14 +15,10 @@ namespace Movie.Domain.Entities
 		public string Genre { get; set; }
 		public DateTime ReleaseDate { get; set; }
 
-		// A film can have multiple reviews
 		public List<Review> Reviews { get; set; }
 
-		// A film can have multiple ratings
-		public List<Rating> Ratings { get; set; }
 
-
-		public List<User> Users { get; set; }
+		public List<AppUser> fans { get; set; }
 
 	}
 }

@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using Movie.Application.Features.Command.CreateUser;
+using Movie.Application.Features.Command.User.CreateUser;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Movie.Application.Validator
 {
-	public class CreateUserValidator:AbstractValidator<CreateUserCommandRequest>
+    public class CreateUserValidator:AbstractValidator<CreateUserCommandRequest>
 	{
         public CreateUserValidator()
         {

@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using Movie.Application.Features.Command.CreateMovie;
+using Movie.Application.Features.Command.Movie.CreateMovie;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Movie.Application.Validator
 {
-	public class CreateMovieValidator : AbstractValidator<CreateMovieCommandRequest>
+    public class CreateMovieValidator : AbstractValidator<CreateMovieCommandRequest>
 	{
 		public CreateMovieValidator() {
 			RuleFor(x => x.Title).NotEmpty();

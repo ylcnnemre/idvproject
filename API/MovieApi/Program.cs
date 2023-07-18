@@ -17,6 +17,7 @@ builder.Services.AddControllers( x => x.Filters.Add<ValidationFilter>()).AddFlue
 	config.RegisterValidatorsFromAssemblyContaining<CreateUserValidator>();
 	config.RegisterValidatorsFromAssemblyContaining<LoginUserValidator>();
 	config.RegisterValidatorsFromAssemblyContaining<CreateMovieValidator>();
+	config.RegisterValidatorsFromAssemblyContaining<UpdateReviewValidator>();
 }).ConfigureApiBehaviorOptions(config => config.SuppressModelStateInvalidFilter = true);
 
 

@@ -1,4 +1,5 @@
 ﻿using Movie.Domain.Entities.Common;
+using Movie.Domain.Entities.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +13,11 @@ namespace Movie.Domain.Entities
 		public string Comment { get; set; }
 
 		// A review belongs to a user
-		public int UserId { get; set; }
-		public User User { get; set; }
+		public string UserId { get; set; }
+		public AppUser User { get; set; }
 
 		// A review belongs to a film
-		public int FilmId { get; set; }
-		public Movie Film { get; set; }
+		public int movieId { get; set; }
+		public Movie movie { get; set; }
 	}
 }

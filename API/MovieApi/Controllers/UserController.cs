@@ -1,12 +1,12 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Movie.Application.Features.Command.CreateUser;
-using Movie.Application.Features.Command.LoginUser;
+using Movie.Application.Features.Command.User.CreateUser;
+using Movie.Application.Features.Command.User.LoginUser;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace MovieApi.Controllers
 {
-	[ApiController]
+    [ApiController]
 	[Route("/api/[controller]")]
 	public class UserController : Controller
 	{

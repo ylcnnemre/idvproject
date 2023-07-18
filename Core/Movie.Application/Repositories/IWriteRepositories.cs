@@ -9,14 +9,13 @@ namespace Movie.Application.Repositories
 {
 	public interface IWriteRepositories<T> where T : class
 	{
-		Task<bool> addAsync();
-		Task<bool> addRangeAsync(List<T> items);
-		bool remove(T item);
-
-		Task<bool> removeRangeAsync(int id);
-
-		bool update(T item);
-		DbSet<T> table();
+		DbSet<T> Table { get;}
+		Task<bool> addAsync(T model);
+		Task<bool> addRangeAsync(List<T> model);
+		bool remove(T model);
+		Task<bool> removeAsync(int id);
+		bool removeRange(List<T> datas);
+		bool update(T model);
 		Task<int> saveAsync();
 
 	}
