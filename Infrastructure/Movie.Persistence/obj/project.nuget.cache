@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ktSRMSvTtSy2fq+lQe+piAPuxOrc3EKFhApKCYx01/qSlsGahlWgMgaXnVRfY8ODnT14/jTQxahBVm+nDMCJtw==",
+  "dgSpecHash": "qeVCHWCme/l0etx9SVau+ISzT63iSiRxZW3ey70C3F+sqRixD+j5gkdE+WM9erq/wA5F3TTVcyz6bt0rBsMb9g==",
   "success": true,
   "projectFilePath": "D:\\NEW YAZILIM\\dotnetv2\\filmapp\\MovieApp\\Infrastructure\\Movie.Persistence\\Movie.Persistence.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,7 @@
     "C:\\Users\\emre\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.18\\microsoft.entityframeworkcore.abstractions.6.0.18.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.18\\microsoft.entityframeworkcore.analyzers.6.0.18.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.18\\microsoft.entityframeworkcore.design.6.0.18.nupkg.sha512",
+    "C:\\Users\\emre\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\6.0.18\\microsoft.entityframeworkcore.inmemory.6.0.18.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.18\\microsoft.entityframeworkcore.relational.6.0.18.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.18\\microsoft.entityframeworkcore.sqlserver.6.0.18.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.18\\microsoft.entityframeworkcore.tools.6.0.18.nupkg.sha512",
@@ -63,6 +64,7 @@
     "C:\\Users\\emre\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\emre\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",

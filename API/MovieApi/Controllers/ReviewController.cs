@@ -1,9 +1,12 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Movie.Application.Features.Command.Review.CreateReview;
 using Movie.Application.Features.Command.Review.DeleteReview;
 using Movie.Application.Features.Command.Review.UpdateReview;
+using Movie.Application.Features.Queries.Review.UserReview;
+using Movie.Domain.Entities.Identity;
 using System.Security.Claims;
 
 namespace MovieApi.Controllers
@@ -15,7 +18,7 @@ namespace MovieApi.Controllers
 	public class ReviewController : Controller
 	{
 		private readonly IMediator mediator;
-
+		
         public ReviewController(IMediator mediator)
         {
 				this.mediator= mediator;
@@ -60,6 +63,15 @@ namespace MovieApi.Controllers
 			}
 		}
 
+
+		[HttpGet("[action]/{userId}" )]   // usera ait reviewler
+		
+		public async Task<IActionResult> userReview([FromRoute] GetuserReviewQueryRequest request )
+		{
+			var result = await	mediator.Send(request);
+			
+			return Ok(result);
+		}
 
 	}
 }

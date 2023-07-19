@@ -20,7 +20,7 @@ namespace Movie.Persistence
 		public static void AddPersistenceService(this IServiceCollection  services)
 		{
 			services.AddDbContext<MovieContext>();
-
+			services.AddDbContext<InMemoryContext>();
 			services.AddIdentity<AppUser, AppRole>(options =>
 			{
 				options.Password.RequireNonAlphanumeric = false;

@@ -9,7 +9,15 @@ namespace Movie.Domain.Entities.Identity
 {
 	public class AppUser : IdentityUser
 	{
+		public AppUser()
+		{
+			Reviews = new List<Review>();
+			FavoriteMovies = new List<Movie>();
+		}
+
+
 		public ICollection<Review> Reviews { get; set; }
 		public ICollection<Movie> FavoriteMovies { get; set; }
+
 	}
 }

@@ -9,5 +9,7 @@ namespace Movie.Application.Repositories.Review
 {
 	public interface IReviewReadRepository : IReadRepository<f.Review> 
 	{
+	
+
 	}
 }

@@ -10,7 +10,12 @@ namespace Movie.Domain.Entities
 {
 	public class Movie  : BaseEntity
 	{
-		public string Title { get; set; }
+        public Movie()
+        {
+			fans = new List<AppUser>();
+        }
+
+        public string Title { get; set; }
 		public string Director { get; set; }
 		public string Genre { get; set; }
 		public DateTime ReleaseDate { get; set; }
